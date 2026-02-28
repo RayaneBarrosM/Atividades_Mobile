@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ButtonText</string>
+        <string name="sortear">Sortear</string>
+        <string name="apagar">Apagar</string>
+        <string name="mega_sena">Mega-Sena</string>
+        <string name="resultado1">Resultado1</string>
+        <string name="resultado2">Resultado2</string>
+        <string name="resultado3">Resultado3</string>
+        <string name="resultado4">Resultado4</string>
+        <string name="resultado5">Resultado5</string>
+        <string name="resultado6">Resultado6</string>
+</resources>
