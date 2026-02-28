@@ -10,10 +10,6 @@
   npm install ButtonTextView
   cd ButtonTextView
 ```
-    
-## Autores
-
-- [@Natali](https://github.com/nouveauromance)
 
 🔗 Aula por Vinícius Heltai Pacheco
 
