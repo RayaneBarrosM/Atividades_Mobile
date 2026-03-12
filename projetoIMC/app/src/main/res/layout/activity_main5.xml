@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity5">
+    tools:context=".ActivityNormal">
 
     <TextView
         android:id="@+id/textView1"
@@ -22,6 +22,7 @@
         app:layout_constraintVertical_bias="0.099" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="364dp"
         android:layout_height="56dp"
         android:text="Você está com o peso correto! Se mantenha assim e com uma rotina de exercicios e alimentação saudavel para ter uma vida melhor!!"
@@ -29,5 +30,27 @@
         app:layout_constraintTop_toBottomOf="@+id/textView1"
         app:layout_constraintVertical_bias="0.141"
         tools:layout_editor_absoluteX="23dp" />
+
+    <Button
+        android:id="@+id/btnVoltarMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F931"
+        android:text="Voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultados"
+        tools:layout_editor_absoluteX="-16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/resultados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Resultados:"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="34dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

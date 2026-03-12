@@ -32,7 +32,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/nome"
@@ -44,7 +45,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.288" />
+        app:layout_constraintVertical_bias="0.263" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -58,10 +59,10 @@
         android:hint="Peso"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.569" />
+        app:layout_constraintVertical_bias="0.484" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -70,9 +71,10 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/peso"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nome" />
+        app:layout_constraintTop_toBottomOf="@+id/nome"
+        app:layout_constraintVertical_bias="0.285" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,8 +83,9 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/altura"
         app:layout_constraintTop_toBottomOf="@+id/peso"
-        app:layout_constraintVertical_bias="0.451"
+        app:layout_constraintVertical_bias="0.256"
         tools:layout_editor_absoluteX="55dp" />
+
 
     <EditText
         android:id="@+id/altura"
@@ -91,11 +94,10 @@
         android:hint="Altura"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.823" />
-
+        app:layout_constraintVertical_bias="0.697" />
 
     <Button
         android:id="@+id/btnCalcular"
@@ -105,9 +107,23 @@
         android:text="Calcular IMC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/altura"
-        tools:layout_editor_absoluteX="-16dp"
+        app:layout_constraintVertical_bias="0.141"
+        tools:layout_editor_absoluteX="24dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"/>
+
+    <Button
+        android:id="@+id/btnLimpar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F004"
+        android:text="Limpar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcular"
+        tools:layout_editor_absoluteX="-16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,16 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetoIMC">
         <activity
-            android:name=".MainActivity5"
+            android:name=".ActivityNormal"
             android:exported="false" />
         <activity
             android:name=".MainActivity4"
             android:exported="false" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".ActivityThin"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".ActivityCorpulent"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
