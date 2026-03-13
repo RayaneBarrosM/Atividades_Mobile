@@ -20,7 +20,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.195" />
+        app:layout_constraintVertical_bias="0.062" />
+
+    <View
+        android:id="@+id/placar"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/padrao"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle"
+        app:layout_constraintVertical_bias="0.68"
+        app:layout_constraintWidth_percent="0.5"
+
+    />
+
+    <TextView
+        android:id="@+id/pontuacao"
+        android:layout_width="106dp"
+        android:layout_height="44dp"
+        tools:layout_editor_absoluteX="149dp"
+        tools:layout_editor_absoluteY="136dp" />
 
     <TextView
         android:id="@+id/textResultado"
@@ -33,7 +56,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/padrao"
-        app:layout_constraintVertical_bias="0.225" />
+        app:layout_constraintVertical_bias="0.119" />
+
 
     <ImageView
         android:id="@+id/padrao"
@@ -44,11 +68,10 @@
         android:src="@drawable/padrao"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTitle"
-        app:layout_constraintVertical_bias="0.626" />
-
+        app:layout_constraintTop_toBottomOf="@+id/pontuacao"
+        app:layout_constraintVertical_bias="0.671" />
 
     <ImageView
         android:id="@+id/paper"
@@ -57,7 +80,7 @@
         android:layout_marginStart="28dp"
         android:scaleType="centerInside"
         android:src="@drawable/papel"
-        android:onClick="slectPapel"
+        android:onClick="selectPapel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textResultado" />
@@ -66,13 +89,14 @@
         android:id="@+id/tesoura"
         android:layout_width="107dp"
         android:layout_height="106dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="24dp"
+        android:onClick="selectTesoura"
         android:scaleType="centerInside"
         android:src="@drawable/tesoura"
-        android:onClick="selectTesoura"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/paper"
-        app:layout_constraintTop_toBottomOf="@+id/textResultado" />
+        app:layout_constraintTop_toBottomOf="@+id/textResultado"
+        app:layout_constraintVertical_bias="0.502" />
 
     <ImageView
         android:id="@+id/pedra"
@@ -85,6 +109,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tesoura"
         app:layout_constraintTop_toBottomOf="@+id/textResultado" />
+
+    <Button
+        android:id="@+id/btClean"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Recomeçar"
+        android:backgroundTint="#F052"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tesoura" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
