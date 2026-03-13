@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         this.opcaoSelecionada("pedra");
     }
 
-    public void slectPapel(View views){
+    public void selectPapel(View views){
         this.opcaoSelecionada("papel");
     }
 
@@ -39,18 +39,23 @@ public class MainActivity extends AppCompatActivity {
         this.opcaoSelecionada("tesoura");
     }
 
-    public void opcaoSelecionada(String opcaoSelecionada){
+    //Placar
+    private int pontosUsuario = 0;
+    private int pontosPC = 0;
+
+    public void opcaoSelecionada(String opcaoSelecionada) {
         ImageView imgresultado = findViewById(R.id.padrao);
         TextView textResultado = findViewById(R.id.textResultado);
+        TextView textPlacar = findViewById(R.id.pontuacao);
 
-        //Logica
+        //Lógica
         int numero = new Random().nextInt(3);
         String[] opcoes = {"pedra", "papel", "tesoura"};
         String opcaoPC = opcoes[numero];
 
 
         //Muda a figura
-        switch (opcaoPC){
+        switch (opcaoPC) {
             case "pedra":
                 imgresultado.setImageResource(R.drawable.pedra);
                 break;
@@ -65,21 +70,42 @@ public class MainActivity extends AppCompatActivity {
         //Logica do Jogo - analise de quem ganhou ou perdeu
         if (
                 (opcaoPC == "Tesoura" && opcaoSelecionada == "papel") ||
-                (opcaoPC == "papel" && opcaoSelecionada == "pedra") ||
-                (opcaoPC == "pedra" && opcaoSelecionada == "tesoura")
-        ){
-            textResultado.setText("Você é ruim! 💀");
-        }else if (
+                        (opcaoPC == "papel" && opcaoSelecionada == "pedra") ||
+                        (opcaoPC == "pedra" && opcaoSelecionada == "tesoura")
+        ) {
+            pontosPC++;
+
+        } else if (
                 (opcaoSelecionada == "Tesoura" && opcaoPC == "papel") ||
-                (opcaoSelecionada == "papel" && opcaoPC == "pedra") ||
-                (opcaoSelecionada == "pedra" && opcaoPC == "tesoura")
-        ){
-            textResultado.setText("Parabéns, você ganhou!☺️");
+                        (opcaoSelecionada == "papel" && opcaoPC == "pedra") ||
+                        (opcaoSelecionada == "pedra" && opcaoPC == "tesoura")
+        ) {
+            pontosUsuario++;
         } else {
             textResultado.setText("Houve um empate!👯‍♂️️");
-
         }
 
+        //Placar Atualiza
+        textPlacar.setText("VOCÊ: " + pontosUsuario + " | PC: " + pontosPC);
+
+        if (pontosUsuario == 5) {
+            textResultado.setText("Parabéns, você ganhou!🏆");
+        } else if (pontosPC == 5) {
+            textResultado.setText("Você é ruim! 💀");
+        }
+    }
+
+    public void recomecarJogo(View view) {
+            pontosUsuario = 0;
+            pontosPC = 0;
+
+           TextView textResultado = findViewById(R.id.textResultado);
+           TextView textPlacar = findViewById(R.id.pontuacao);
+           ImageView imgResultado = findViewById(R.id.padrao);
+
+           textResultado.setText("Escolha a sua opção");
+           textPlacar.setText("VOCÊ: 0 | PC: 0");
+           imgResultado.setImageResource(R.drawable.padrao);
     }
 }
 
